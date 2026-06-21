@@ -60,6 +60,12 @@ const fcData = [
     {d:"499 Silver", p:"Rp 77.000"}, {d:"999 Silver", p:"Rp 151.000"}, {d:"1999 Silver", p:"Rp 308.000"},
     {d:"4999 Silver", p:"Rp 738.000"}, {d:"9999 Silver", p:"Rp 1.470.000"}
 ];
+const gidata = [
+   {d:"60 crystals", p:"Rp20.000"},{d:"300 +30 crystals", p:"Rp100.000"},{d:"980 + 110 crystals", p:"Rp280.000"},{d:"1.980 + 260 crystals", p:"Rp520.000"},{d:"3.280 + 600 crystals", p:"Rp850.000"},{d:"6.480 + 1.600 crystals", p:"Rp1.700.000"},{d:"belessing welkin moon", p:"Rp110.000"}];
+const mcdata = [
+   {d:"Minecraft 1720 Minecoins", p:"Rp170.000"},{d:"Minecraft 3500 Minecoins", p:"Rp299.000"}];
+const rbdata = [
+   {d:"1 robux [5 hari]", p:"Rp2.500"},{d:"5 robux [5 hari]", p:"Rp3.500"},{d:"10 robux [5 hari]", p:"Rp4.500"},{d:"15 [5 hari]", p:"Rp5.000"},{d:"20 robux [5 hari]", p:"Rp6.000"},{d:"25 robux [5 hari]", p:"Rp6.500"},{d:"50 robux [5 hari]", p:"Rp11.000"},{d:"100 robux [5 hari]", p:"Rp18.000"},{d:"200 robux [5 hari]", p:"Rp34.000"},{d:"300 robux [5 hari]", p:"Rp49.000"},{d:"400 robux [5 hari]", p:"Rp60.000"},{d:"500 robux [5 hari]", p:"Rp79.000"},{d:"600 robux [5 hari]", p:"Rp85.000"},{d:"700 robux [5 hari]", p:"Rp111.000"},{d:"800 robux [5 hari]", p:"Rp140.000"},{d:"900 robux[5 hari]", p:"Rp150.000"},{d:"1.000 robux [5 hari]", p:"Rp180.000"}];
 
 // Fungsi untuk membuat elemen kartu produk di HTML
 function renderCards(data, elementId, gameLabel, uniquePrefix, iconClass = "fa-gem") {
@@ -89,6 +95,9 @@ renderCards(codData, 'pane-cod', 'Call Of Duty', 'cod', 'fa-solid fa-skull');
 renderCards(kcData, 'pane-kc', "King's Chalce", 'kc', 'fa-solid fa-gem');
 renderCards(hokData, 'pane-hok', 'Honor Of Kings', 'hok', 'fa-solid fa-shield-halved');
 renderCards(fcData, 'pane-fc', 'FC Mobile', 'fc', 'fa-solid fa-soccer-ball');
+renderCards(gidata, 'pane-gi', 'Genshin Impact', 'gi', 'fa-solid fa-dragon')
+renderCards(mcdata, 'pane-mc', 'Minecraft', 'mc', 'fa-solid fa-cube')
+renderCards(rbdata, 'pane-rb', 'Roblox' 'rb', 'fa-solid fa-cubes')
 
 // Fungsi Menampilkan Kustomisasi Alert Modal Elegan
 function showCustomAlert(title, message, isSuccess = true) {
@@ -142,7 +151,7 @@ function switchGame(gameKey, scrollToSection = false) {
     currentGameKey = gameKey;
     selectedNominal = ""; selectedHarga = "";
 
-    const labels = {ff:"Free Fire", ml:"Mobile Legends", bs:"Blood Strike", pubg:"PUBG Mobile", vlo:"Valorant", cod:"Call Of Duty", kc:"King's Chalce", hok:"Honor Of Kings", fc:"FC Mobile"};
+    const labels = {ff:"Free Fire", ml:"Mobile Legends", bs:"Blood Strike", pubg:"PUBG Mobile", vlo:"Valorant", cod:"Call Of Duty", kc:"King's Chalce", hok:"Honor Of Kings", fc:"FC Mobile", gi:'Genshin Impact', mc:'Minecraft', rb:'Roblox'};
     currentGameLabel = labels[gameKey] || gameKey;
 
     document.querySelectorAll('.game-pane').forEach(el => el.classList.add('hidden'));
@@ -172,6 +181,13 @@ function switchGame(gameKey, scrollToSection = false) {
     } else {
         zoneWrapper.classList.add('hidden');
         document.getElementById('zone-id').value = "";
+    }
+   const zoneWrapper = document.getElementById('choone server-uid-wrapper');
+    if (gameKey === 'gi') {
+        zoneWrapper.classList.remove('hidden');
+    } else {
+        zoneWrapper.classList.add('hidden');
+        document.getElementById('choone server-uid').value = "";
     }
 
     if (scrollToSection) {
