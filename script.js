@@ -97,7 +97,7 @@ renderCards(hokData, 'pane-hok', 'Honor Of Kings', 'hok', 'fa-solid fa-shield-ha
 renderCards(fcData, 'pane-fc', 'FC Mobile', 'fc', 'fa-solid fa-soccer-ball');
 renderCards(gidata, 'pane-gi', 'Genshin Impact', 'gi', 'fa-solid fa-dragon')
 renderCards(mcdata, 'pane-mc', 'Minecraft', 'mc', 'fa-solid fa-cube')
-renderCards(rbdata, 'pane-rb', 'Roblox' 'rb', 'fa-solid fa-cubes')
+renderCards(rbdata, 'pane-rb', 'Roblox', 'rb', 'fa-solid fa-cubes')
 
 // Fungsi Menampilkan Kustomisasi Alert Modal Elegan
 function showCustomAlert(title, message, isSuccess = true) {
@@ -217,9 +217,10 @@ function prosesPembayaran() {
     const nick = document.getElementById('player-nickname').value.trim();
     const idPlayer = document.getElementById('player-id').value.trim();
     const idZone = document.getElementById('zone-id').value.trim();
+    const choone server = document.getElementById('choone-uid')
 
     if (!nick) {
-        showCustomAlert("Nickname Kosong", "Mohon masukkan Nickname akun game kamu!", false);
+        showCustomAlert("Nickname Kosong", "Mohon masukkan Nickname akun game kamu!, kalo gtw ngasal aja yg penting bener id nya!", false);
         return;
     }
     if (!idPlayer) {
@@ -230,10 +231,14 @@ function prosesPembayaran() {
         showCustomAlert("Zone ID Kosong", "Khusus Mobile Legends, mohon isi Zone ID dalam kurung kamu!", false);
         return;
     }
+   if (currentGameKey === 'gi' && !choone server) {showCustomAlert+"choone server kosong", "khusua Genshin Impact, mohon isi choone server dalam kurung kamu!", false);
+       return;?
+   }
 
     let akunTujuan = idPlayer;
     if (currentGameKey === 'ml') { akunTujuan += ` (${idZone})`; }
-
+   let akunTujuan = uidplayer;
+   if (currentGameKey === 'gi') { akunTujuan +=  `(${Choose Server})`; }
     document.getElementById('inv-game').innerText = currentGameLabel;
     document.getElementById('inv-item').innerText = selectedNominal;
     document.getElementById('inv-id').innerText = akunTujuan;
