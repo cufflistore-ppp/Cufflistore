@@ -182,13 +182,6 @@ function switchGame(gameKey, scrollToSection = false) {
         zoneWrapper.classList.add('hidden');
         document.getElementById('zone-id').value = "";
     }
-   const zoneWrapper = document.getElementById('choone server-uid-wrapper');
-    if (gameKey === 'gi') {
-        zoneWrapper.classList.remove('hidden');
-    } else {
-        zoneWrapper.classList.add('hidden');
-        document.getElementById('choone server-uid').value = "";
-    }
 
     if (scrollToSection) {
         const targetSection = document.getElementById('nominal-section');
@@ -234,11 +227,15 @@ function prosesPembayaran() {
    if (currentGameKey === 'gi' && !choone server) {showCustomAlert+"choone server kosong", "khusua Genshin Impact, mohon isi choone server dalam kurung kamu!", false);
        return;?
    }
-
     let akunTujuan = idPlayer;
     if (currentGameKey === 'ml') { akunTujuan += ` (${idZone})`; }
+
+      if (currentGameKey === 'gi' && !choone server) {showCustomAlert+"choone server kosong", "khusua Genshin Impact, mohon isi choone server dalam kurung kamu!", false);
+       return;?
+   }
    let akunTujuan = uidplayer;
    if (currentGameKey === 'gi') { akunTujuan +=  `(${Choose Server})`; }
+
     document.getElementById('inv-game').innerText = currentGameLabel;
     document.getElementById('inv-item').innerText = selectedNominal;
     document.getElementById('inv-id').innerText = akunTujuan;
