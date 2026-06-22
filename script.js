@@ -210,7 +210,7 @@ function prosesPembayaran() {
     const nick = document.getElementById('player-nickname').value.trim();
     const idPlayer = document.getElementById('player-id').value.trim();
     const idZone = document.getElementById('zone-id').value.trim();
-    const choone server = document.getElementById('choone-uid')
+    const choone server = document.getElementById('choone-uid').value.trim();
 
     if (!nick) {
         showCustomAlert("Nickname Kosong", "Mohon masukkan Nickname akun game kamu!, kalo gtw ngasal aja yg penting bener id nya!", false);
