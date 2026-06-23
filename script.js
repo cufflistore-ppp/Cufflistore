@@ -1,4 +1,3 @@
-
 // Inisialisasi Swiper Slider
 var swiper = new Swiper(".mySwiper", {
     loop: true, 
@@ -95,9 +94,9 @@ renderCards(codData, 'pane-cod', 'Call Of Duty', 'cod', 'fa-solid fa-skull');
 renderCards(kcData, 'pane-kc', "King's Chalce", 'kc', 'fa-solid fa-gem');
 renderCards(hokData, 'pane-hok', 'Honor Of Kings', 'hok', 'fa-solid fa-shield-halved');
 renderCards(fcData, 'pane-fc', 'FC Mobile', 'fc', 'fa-solid fa-soccer-ball');
-renderCards(gidata, 'pane-gi', 'Genshin Impact', 'gi', 'fa-solid fa-dragon')
-renderCards(mcdata, 'pane-mc', 'Minecraft', 'mc', 'fa-solid fa-cube')
-renderCards(rbdata, 'pane-rb', 'Roblox', 'rb', 'fa-solid fa-cubes')
+renderCards(gidata, 'pane-gi', 'Genshin Impact', 'gi', 'fa-solid fa-dragon');
+renderCards(mcdata, 'pane-mc', 'Minecraft', 'mc', 'fa-solid fa-cube');
+renderCards(rbdata, 'pane-rb', 'Roblox', 'rb', 'fa-solid fa-cubes');
 
 // Fungsi Menampilkan Kustomisasi Alert Modal Elegan
 function showCustomAlert(title, message, isSuccess = true) {
@@ -175,12 +174,20 @@ function switchGame(gameKey, scrollToSection = false) {
         activeBtn.querySelector('span').className = "text-[11px] font-bold mt-2.5 text-cyan-400 transition-colors line-clamp-2";
     }
 
+    // Mengatur input khusus game tertentu
     const zoneWrapper = document.getElementById('zone-id-wrapper');
+    const serverWrapper = document.getElementById('choose-server-wrapper');
+    
+    // Reset wrapper visibilitas
+    zoneWrapper.classList.add('hidden');
+    serverWrapper.classList.add('hidden');
+    document.getElementById('zone-id').value = "";
+    document.getElementById('choose-server').value = "";
+
     if (gameKey === 'ml') {
         zoneWrapper.classList.remove('hidden');
-    } else {
-        zoneWrapper.classList.add('hidden');
-        document.getElementById('zone-id').value = "";
+    } else if (gameKey === 'gi') {
+        serverWrapper.classList.remove('hidden');
     }
 
     if (scrollToSection) {
@@ -210,7 +217,7 @@ function prosesPembayaran() {
     const nick = document.getElementById('player-nickname').value.trim();
     const idPlayer = document.getElementById('player-id').value.trim();
     const idZone = document.getElementById('zone-id').value.trim();
-    const choone server = document.getElementById('choone-uid').value.trim();
+    const chooseServer = document.getElementById('choose-server').value.trim();
 
     if (!nick) {
         showCustomAlert("Nickname Kosong", "Mohon masukkan Nickname akun game kamu!, kalo gtw ngasal aja yg penting bener id nya!", false);
@@ -224,17 +231,17 @@ function prosesPembayaran() {
         showCustomAlert("Zone ID Kosong", "Khusus Mobile Legends, mohon isi Zone ID dalam kurung kamu!", false);
         return;
     }
-   if (currentGameKey === 'gi' && !choone server) {showCustomAlert+"choone server kosong", "khusua Genshin Impact, mohon isi choone server dalam kurung kamu!", false);
-       return;?
-   }
-    let akunTujuan = idPlayer;
-    if (currentGameKey === 'ml') { akunTujuan += ` (${idZone})`; }
+    if (currentGameKey === 'gi' && !chooseServer) {
+        showCustomAlert("Choose Server Kosong", "Khusus Genshin Impact, mohon isi server dalam kurung kamu!", false);
+        return;
+    }
 
-      if (currentGameKey === 'gi' && !choone server) {showCustomAlert+"choone server kosong", "khusua Genshin Impact, mohon isi choone server dalam kurung kamu!", false);
-       return;?
-   }
-   let akunTujuan = uidplayer;
-   if (currentGameKey === 'gi') { akunTujuan +=  `(${Choose Server})`; }
+    let akunTujuan = idPlayer;
+    if (currentGameKey === 'ml') { 
+        akunTujuan += ` (${idZone})`; 
+    } else if (currentGameKey === 'gi') { 
+        akunTujuan += ` (${chooseServer})`; 
+    }
 
     document.getElementById('inv-game').innerText = currentGameLabel;
     document.getElementById('inv-item').innerText = selectedNominal;
@@ -264,9 +271,14 @@ function kirimKeTelegram() {
     const nick = document.getElementById('player-nickname').value.trim();
     const idPlayer = document.getElementById('player-id').value.trim();
     const idZone = document.getElementById('zone-id').value.trim();
+    const chooseServer = document.getElementById('choose-server').value.trim();
     
     let akunTujuan = idPlayer;
-    if (currentGameKey === 'ml') { akunTujuan += ` (${idZone})`; }
+    if (currentGameKey === 'ml') { 
+        akunTujuan += ` (${idZone})`; 
+    } else if (currentGameKey === 'gi') {
+        akunTujuan += ` (${chooseServer})`;
+    }
 
     const pesan = `🛒 *PESANAN BARU MASUK*\n\n` +
                   `🎮 *Game:* ${currentGameLabel}\n` +
@@ -296,4 +308,3 @@ function kirimKeTelegram() {
         showCustomAlert("Kesalahan Jaringan", "Gagal menghubungi server Telegram. Periksa koneksi internet Anda.", false);
     });
 }
-
