@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-< lang="id">
+<html lang ="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style.css">
 </head>
-< class="bg-gray-950 text-white font-sans antialiased selection:bg-cyan-500 selection:text-gray-950">
+<body class="bg-gray-950 text-white font-sans antialiased selection:bg-cyan-500 selection:text-gray-950">
 
     <nav class="relative w-full h-40 md:h-52 border-b border-gray-900 overflow-hidden flex items-center bg-gray-950">
         <div class="absolute inset-0 z-0">
@@ -83,14 +83,14 @@
                             Cek Harga <i class="fa-solid fa-arrow-right text-xs"></i>
                         </button>
                     </div>
-                </div>
+                </>
 
             </div>
             <div class="swiper-pagination"></div>
         </div>
     </section>
 
-    < id="game-section" class="max-w-6xl mx-auto px-4 py-6 flex flex-col gap-6">
+    <div id="game-section" class="max-w-6xl mx-auto px-4 py-6 flex flex-col gap-6">
         
         <div class="bg-gray-900/20 border border-gray-900 rounded-3xl p-6 md:p-8 backdrop-blur-md relative overflow-hidden">
             <div class="absolute top-0 left-0 w-32 h-32 bg-cyan-500/5 blur-3xl pointer-events-none"></div>
@@ -162,20 +162,24 @@
                     </div>
                     <span class="text-[11px] font-bold mt-2.5 text-gray-400 transition-colors group-hover:text-white line-clamp-2">FC Mobile</span>
                 </div>
+              
+              <div onlick="switchGame('gi', true)" id="btn-gi" class="game-nav-btn group xursor-pointer flex flex-col items-center text-center w-20 transition-all duration-300">
+                <div class="w-16 h-16 rounded-2x1 overflow-hidden border-2 border-transparent shadow-md transition-all duration-300 group-hover:scale-105 group-hover:border-gray-700">
                         <img src="gi.jpg" alt="Genshin Impact" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/150x150/111827/ffffff?text=GI'">
             </div>
             <span class="text-[11px] font-bold mt-2.5 text-gray-400 transition-colors group-hover:text-white line-clamp-2">Genshin Impact</span>
         </div>
+              <div onlick="switchGame('mc', true)" id="btn-mc" class="game-nav-btn group xursor-pointer flex flex-col items-center text-center w-20 transition-all duration-300">
+                <div class="w-16 h-16 rounded-2x1 overflow-hidden border-2 border-tr"
       <img src="mc.jpg" alt="Minecraft" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/150x150/111827/ffffff?text=MC'">
         </div>
         <span class="text-[11px] font-bold mt-2.5 text-gray-400 transition-colors group-hover:text-white line-clamp-2">Minecraft</span>
         </div>
+      
        <img src="rb.jpg" alt="Roblox" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/150x150/111827/ffffff?text=RB'">
         </div>
         <span class="text-[11px] font-bold mt-2.5 text-gray-400 transition-colors group-hover:text-white line-clamp-2">Roblox</span>
-             </div>
-           </div>
-         </div>
+</div>
         <div id="nominal-section" class="bg-gray-900/20 border border-gray-900 rounded-3xl p-6 md:p-8 backdrop-blur-md">
             <div class="flex items-center gap-3.5 mb-6">
                 <div class="w-10 h-10 rounded-2xl bg-gradient-to-br from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 font-bold shadow-lg">
@@ -196,7 +200,9 @@
             <div id="pane-kc" class="game-pane grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 hidden"></div>
             <div id="pane-hok" class="game-pane grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 hidden"></div>
             <div id="pane-fc" class="game-pane grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 hidden"></div>
-        </div>
+        <div id="pane-gi" class="game-pane grid grid-cols-2 sm:gdid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 hidden"></div>
+          <div id="pane-mc" class="game-pane grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 hidden"></div>
+          <div id="pane-rb" class="game-pane grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 hidden"></div>
 
         <div class="bg-gray-900/20 border border-gray-900 rounded-3xl p-6 md:p-8 backdrop-blur-md" id="account-section">
             <div class="flex items-center gap-3.5 mb-6">
@@ -222,8 +228,14 @@
                     <label class="block text-xs font-black uppercase tracking-widest text-gray-400 mb-2.5">Zone ID</label>
                     <input type="text" id="zone-id" placeholder="(1234)" class="w-full bg-gray-950/60 border border-gray-800 rounded-2xl px-4 py-3.5 text-sm focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 text-white text-center transition duration-300 font-bold placeholder-gray-600">
                 </div>
+              <div id="choose-server-wrapper"
+class="hidden">
+                     <label class="block text-xs font-blak uppercase tracking-widest text-gray-400 md-2.5">choose server</label>
+                         <input type="text" id="choosw-server"placeholder="(Amerika)" class="w-full bg-gray-950/60 border border-gray-800 rounded-2x1 px-4 py-3.5 text-sm focus:outline-none focus:border-cyan-500 focus:ring-1 fokus:ring-cyan-500 text-white text-center transition duration-300 font-bold placeholder-gray-600"></div>
+                          
             </div>
         </div>
+      </div>
 
         <div class="bg-gray-900/20 border border-gray-900 rounded-3xl p-6 md:p-8 backdrop-blur-md" id="payment-section">
             <div class="flex items-center gap-3.5 mb-6">
@@ -237,7 +249,7 @@
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                <div onclick="selectPaymentMethod('DANA', this)" id="default-pay" class="pay-card border-2 border-emerald-500 bg-gray-950/50 rounded-2xl py-5 text-center cursor-pointer font-black text-2xl tracking-widest text-emerald-400 transition-all duration-300 shadow-xl shadow-emerald-500/5 flex items-center justify-center gap-2">
+                <div onclick="selectPaymentMethod('DANA', this)"id="default-pay"class="pay-card border-2 border-emerald-500 bg-gray-950/50 rounded-2xl py-5 text-center cursor-pointer font-black text-2xl tracking-widest text-emerald-400 transition-all duration-300 shadow-xl shadow-emerald-500/5 flex items-center justify-center gap-2">
                     <i class="fa-solid fa-wallet text-base"></i> DANA
                 </div>
                 <div onclick="selectPaymentMethod('GOPAY', this)" class="pay-card border border-gray-800 bg-gray-950/30 rounded-2xl py-5 text-center cursor-pointer font-black text-2xl tracking-widest text-gray-400 hover:border-gray-700 hover:bg-gray-950/50 transition-all duration-300 flex items-center justify-center gap-2">
