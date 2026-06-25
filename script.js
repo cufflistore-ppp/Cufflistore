@@ -158,8 +158,7 @@ function switchGame(gameKey, scrollToSection = false) {
         ff: "Free Fire", ml: "Mobile Legends", bs: "Blood Strike", pubg: "PUBG Mobile", 
         vlo: "Valorant", cod: "Call Of Duty", kc: "King's Chalce", hok: "Honor Of Kings", 
         fc: "FC Mobile", gi: 'Genshin Impact', mc: 'Minecraft', rb: 'Roblox', 
-        sps: 'Super Sus', mcg: 'Magic Chess Go Go (MCGG)',
-        zp:'Zepeto Zems', 
+        sps: 'Super Sus', mcg: 'Magic Chess Go Go (MCGG)', zp:'Zepeto Zems', 
     };
     currentGameLabel = labels[gameKey] || gameKey;
 
