@@ -40,8 +40,8 @@ const adminAccounts = {
 const mlData = [{d:"2 Diamonds", p:"Rp2.000"}, {d:"5 Diamonds", p:"Rp3.000"}, {d:"12 Diamonds", p:"Rp4.000"}, {d:"19 Diamonds", p:"Rp5.500"}, {d:"28 Diamonds", p:"Rp8.000"}, {d:"59 Diamonds", p:"Rp16.000"}, {d:"112 Diamonds", p:"Rp30.000"}, {d:"172 Diamonds", p:"Rp46.000"}, {d:"381 Diamonds", p:"Rp105.000"}, {d:"429 Diamonds", p:"Rp115.000"}, {d:"1136 Diamonds", p:"Rp294.000"},{d:"wdp", p:"Rp35.000"},{d:"wdp ×2", p:"Rp70.000"},{d:"wdp ×3", p:"Rp100.000"},{d:"wdp ×4", p:"Rp135.000"},{d:"wdp ×5", p:"Rp160.000"},{d:"stalight membership (300 diamonds)", p:"Rp95.000"},{d:"stalight membership plus (750 diamonds)", p:"Rp120.000"}];
 const bsData = [{d:"100 + 5 Golds", p:"Rp11.000"}, {d:"300 + 20 Golds", p:"Rp35.000"}, {d:"500 + 40 Golds", p:"Rp58.000"}, {d:"600 + 45 Golds", p:"Rp70.000"}, {d:"800 + 60 Golds", p:"Rp93.000"}, {d:"1000 + 100 Golds", p:"Rp117.000"}, {d:"1200 + 110 Golds", p:"Rp140.000"}, {d:"1500 + 140 Golds", p:"Rp175.000"}, {d:"2000 + 260 Golds", p:"Rp234.000"}, {d:"2500 + 300 Golds", p:"Rp292.000"}];
 const ffData = [{d:"5 Diamonds", p:"Rp1.500"}, {d:"10 Diamonds", p:"Rp2.000"}, {d:"12 Diamonds", p:"Rp2.200"}, {d:"15 Diamonds", p:"Rp3.000"}, {d:"20 Diamonds", p:"Rp4.000"}, {d:"25 Diamonds", p:"Rp5.000"}, {d:"50 Diamonds", p:"Rp8.000"}, {d:"70 Diamonds", p:"Rp10.000"}, {d:"140 Diamonds", p:"Rp19.000"}, {d:"355 Diamonds", p:"Rp49.000"}, {d:"720 Diamonds", p:"Rp99.000"}, {d:"1450 Diamonds", p:"Rp197.000"}];
-const pubgData = [{d:"60 UC global", p:"Rp20.000"},{d:"120 uc global", p:"35.000"},{d:"300 + 25 uc global", p:"Rp82.000"},{d:"325 +  UC global", p:"Rp98.000"},{d:"600 + 60 uc global", p:"Rp160.000"},{d:"660 + 120 uc global", p:"190.000"},{d:"1.500 + 300 uc global", p:"390.000"},{d:"2.100 + 360 uc global", p:"557.000"},{d:"3.000 + 850 uc global", p:"778.000"},{d:"6.000 + 2.100 uc global", p:"1.563.000"}];
-const vloData = [{d:"472 vp", p:"Rp51.000"}, {d:"1.000 vp", p:"Rp101.000"},{d:"1.475 vp", p:"Rp150.000"},{d:"2.050 vp", p:"Rp200.000"},{d:"2.525 vp", p:"Rp249.000"},{d:"3.050 vp", p:"Rp300.000"},{d:"3.650 vp", p:"Rp345.000"},{d:"4.125 vp", p:"Rp395.000"},{d:"4.650 vp", p:"445.000"},{d:"5.350 vp", p:"Rp496.000"},{d:"5.700 vp", p:"Rp544.000"},{d:"5.825 vp", p:"Rp550.000"},{d:"6.350 vp", p:"Rp599.000"},{d:"7.400 vp", p:"Rp694.000"},{d:"9.000 vp", p:"Rp840.000"},{d:"11.000 vp", p:"Rp974.000"},{d:"11.475 vp", p:"Rp1.023.000"}];
+const pubgData = [{d:"60 UC global", p:"Rp20.000"},{d:"120 uc global", p:"Rp35.000"},{d:"300 + 25 uc global", p:"Rp82.000"},{d:"325 + UC global", p:"Rp98.000"},{d:"600 + 60 uc global", p:"Rp160.000"},{d:"660 + 120 uc global", p:"Rp190.000"},{d:"1.500 + 300 uc global", p:"Rp390.000"},{d:"2.100 + 360 uc global", p:"Rp557.000"},{d:"3.000 + 850 uc global", p:"Rp778.000"},{d:"6.000 + 2.100 uc global", p:"Rp1.563.000"}];
+const vloData = [{d:"472 vp", p:"Rp51.000"}, {d:"1.000 vp", p:"Rp101.000"},{d:"1.475 vp", p:"Rp150.000"},{d:"2.050 vp", p:"Rp200.000"},{d:"2.525 vp", p:"Rp249.000"},{d:"3.050 vp", p:"Rp300.000"},{d:"3.650 vp", p:"Rp345.000"},{d:"4.125 vp", p:"Rp395.000"},{d:"4.650 vp", p:"Rp445.000"},{d:"5.350 vp", p:"Rp496.000"},{d:"5.700 vp", p:"Rp544.000"},{d:"5.825 vp", p:"Rp550.000"},{d:"6.350 vp", p:"Rp599.000"},{d:"7.400 vp", p:"Rp694.000"},{d:"9.000 vp", p:"Rp840.000"},{d:"11.000 vp", p:"Rp974.000"},{d:"11.475 vp", p:"Rp1.023.000"}];
 const codData = [{d:"31 cp", p:"Rp10.000"}, {d:"63 cp", p:"Rp13.000"},{d:"128 cp", p:"Rp25.000"},{d:"321 cp", p:"Rp60.000"},{d:"645 cp", p:"Rp105.000"},{d:"800 cp", p:"Rp125.000"},{d:"1.373 cp", p:"Rp220.000"},{d:"2.060 cp", p:"Rp320.000"},{d:"2.750 cp", p:"Rp370.000"},{d:"3.564 cp", p:"Rp520.000"},{d:"5.618 cp",p:"Rp720.000"},{d:"7.656 cp", p:"Rp1.000.000"}];
 const kcData = [
     {d:"4 + 6 Diamonds", p:"Rp 9.000"}, {d:"10 + 16 Diamonds", p:"Rp 19.000"}, {d:"10 + 16 Diamonds x3", p:"Rp 56.000"},
@@ -51,7 +51,7 @@ const kcData = [
     {d:"1000 + 1750 Diamonds x3", p:"Rp 4.811.000"}, {d:"Weekly Card", p:"Rp 9.000"}, {d:"Monthly Card", p:"Rp 36.000"},
     {d:"Diamonds Weekly Card", p:"Rp 36.000"}, {d:"Yearly Card", p:"Rp 310.000"}, {d:"Lunar Blessing", p:"Rp 136.000"}
 ];
-const hokData = [{d:"16 Tokens", p:"Rp5.000"}, {d:"80 Tokens", p:"Rp18.000"},{d:"240 Tokens", p:"Rp48.000"},{d:"400 Tokens", p:"Rp79.000"},{d:"560 Tokens", p:"Rp109.000"},{d:"800 + 30 Tokens", p:"Rp152.000"},{d:"1.200 + 45 Tokens", p:"Rp225.000"},{d:"2.400 + 108 Tokens", p:"Rp448.000"},{d:"4000 + 180 Tokens", p:"744.000"},{d:"8000 + 360 Tokens", p:"Rp1.477.000"},{d:"weekly card", p:"Rp19.000"},{d:"weekly card plus", p:"Rp52.000"}];
+const hokData = [{d:"16 Tokens", p:"Rp5.000"}, {d:"80 Tokens", p:"Rp18.000"},{d:"240 Tokens", p:"Rp48.000"},{d:"400 Tokens", p:"Rp79.000"},{d:"560 Tokens", p:"Rp109.000"},{d:"800 + 30 Tokens", p:"Rp152.000"},{d:"1.200 + 45 Tokens", p:"Rp225.000"},{d:"2.400 + 108 Tokens", p:"Rp448.000"},{d:"4000 + 180 Tokens", p:"Rp744.000"},{d:"8000 + 360 Tokens", p:"Rp1.477.000"},{d:"weekly card", p:"Rp19.000"},{d:"weekly card plus", p:"Rp52.000"}];
 const fcData = [
     {d:"40 FC Points", p:"Rp 8.000"}, {d:"100 FC Points", p:"Rp 18.000"}, {d:"520 FC Points", p:"Rp 77.000"},
     {d:"1070 FC Points", p:"Rp 151.000"}, {d:"2200 FC Points", p:"Rp 308.000"}, {d:"5750 FC Points", p:"Rp 738.000"},
@@ -59,12 +59,12 @@ const fcData = [
     {d:"499 Silver", p:"Rp 77.000"}, {d:"999 Silver", p:"Rp 151.000"}, {d:"1999 Silver", p:"Rp 308.000"},
     {d:"4999 Silver", p:"Rp 738.000"}, {d:"9999 Silver", p:"Rp 1.470.000"}
 ];
-const gidata = [
-   {d:"60 crystals", p:"Rp20.000"},{d:"300 +30 crystals", p:"Rp100.000"},{d:"980 + 110 crystals", p:"Rp280.000"},{d:"1.980 + 260 crystals", p:"Rp520.000"},{d:"3.280 + 600 crystals", p:"Rp850.000"},{d:"6.480 + 1.600 crystals", p:"Rp1.700.000"},{d:"belessing welkin moon", p:"Rp110.000"}];
-const mcdata = [
-   {d:"Minecraft 1720 Minecoins", p:"Rp170.000"},{d:"Minecraft 3500 Minecoins", p:"Rp299.000"}];
-const rbdata = [
-   {d:"1 robux [5 hari]", p:"Rp2.500"},{d:"5 robux [5 hari]", p:"Rp3.500"},{d:"10 robux [5 hari]", p:"Rp4.500"},{d:"15 [5 hari]", p:"Rp5.000"},{d:"20 robux [5 hari]", p:"Rp6.000"},{d:"25 robux [5 hari]", p:"Rp6.500"},{d:"50 robux [5 hari]", p:"Rp11.000"},{d:"100 robux [5 hari]", p:"Rp18.000"},{d:"200 robux [5 hari]", p:"Rp34.000"},{d:"300 robux [5 hari]", p:"Rp49.000"},{d:"400 robux [5 hari]", p:"Rp60.000"},{d:"500 robux [5 hari]", p:"Rp79.000"},{d:"600 robux [5 hari]", p:"Rp85.000"},{d:"700 robux [5 hari]", p:"Rp111.000"},{d:"800 robux [5 hari]", p:"Rp140.000"},{d:"900 robux[5 hari]", p:"Rp150.000"},{d:"1.000 robux [5 hari]", p:"Rp180.000"}];
+const gidata = [{d:"60 crystals", p:"Rp20.000"},{d:"300 +30 crystals", p:"Rp100.000"},{d:"980 + 110 crystals", p:"Rp280.000"},{d:"1.980 + 260 crystals", p:"Rp520.000"},{d:"3.280 + 600 crystals", p:"Rp850.000"},{d:"6.480 + 1.600 crystals", p:"Rp1.700.000"},{d:"belessing welkin moon", p:"Rp110.000"}];
+const mcdata = [{d:"Minecraft 1720 Minecoins", p:"Rp170.000"},{d:"Minecraft 3500 Minecoins", p:"Rp299.000"}];
+const rbdata = [{d:"1 robux [5 hari]", p:"Rp2.500"},{d:"5 robux [5 hari]", p:"Rp3.500"},{d:"10 robux [5 hari]", p:"Rp4.500"},{d:"15 [5 hari]", p:"Rp5.000"},{d:"20 robux [5 hari]", p:"Rp6.000"},{d:"25 robux [5 hari]", p:"Rp6.500"},{d:"50 robux [5 hari]", p:"Rp11.000"},{d:"100 robux [5 hari]", p:"Rp18.000"},{d:"200 robux [5 hari]", p:"Rp34.000"},{d:"300 robux [5 hari]", p:"Rp49.000"},{d:"400 robux [5 hari]", p:"Rp60.000"},{d:"500 robux [5 hari]", p:"Rp79.000"},{d:"600 robux [5 hari]", p:"Rp85.000"},{d:"700 robux [5 hari]", p:"Rp111.000"},{d:"800 robux [5 hari]", p:"Rp140.000"},{d:"900 robux[5 hari]", p:"Rp150.000"},{d:"1.000 robux [5 hari]", p:"Rp180.000"}];
+const spsdata = [{d:"100 Golds star", p:"Rp13.000"},{d:"128 Golds star", p:"Rp25.000"},{d:"200 Golds star", p:"Rp27.000"},{d:"310 Golds star", p:"Rp36.000"},{d:"395 Golds star", p:"Rp39.000"},{d:"400 Golds star", p:"Rp48.000"},{d:"520 Golds star", p:"Rp55.000"},{d:"670 Golds star", p:"Rp70.000"},{d:"810 Golds star", p:"Rp88.000"},{d:"900 Golds star", p:"Rp96.000"},{d:"1060 Golds star", p:"Rp100.000"},{d:"weekly card", p:"Rp15.000"},{d:"super pass", p:"Rp68.000"},{d:"super pass bundle", p:"Rp135.000"},{d:"Monthly card", p:"Rp145.000"},{d:"super card", p:"Rp162.000"}];
+const mcgdata= [{d:"5 diamonds", p:"Rp4.000"},{d:"11 diamond", p:"Rp6.000"},{d:"12 diamonds", p:"Rp8.000"},{d:"17 diamonds", p:"Rp9.500"},{d:"25 diamonds", p:"Rp11.500"},{d:"40 diamonds", p:"Rp14.500"},{d:"50 diamonds", p:"Rp18.000"},{d:"53 diamonds", p:"Rp19.187"},{d:"77 diamonds", p:"Rp25.000"},{d:"150 diamonds", p:"Rp45.000"},{d:"153 diamonds", p:"Rp46.000"},{d:"217 diamonds", p:"Rp64.000"},{d:"250 diamonds", p:"Rp75.000"},{d:"256 diamonds", p:"Rp77.000"},{d:"367 diamonds", p:"Rp108.187"},{d:"500 diamonds", p:"Rp142.246"},{d:"503 diamonds", p:"Rp144.000"},{d:"774 diamonds", p:"Rp217.367"},{d:"1.708 diamonds", p:"Rp471.000"},{d:"4.003 diamonds", p:"Rp1.110.100"},{d:"10.000 diamonds", p:"Rp2.200.278"},{d:"15.000 diamonds", p:"Rp4.120.000"},{d:"weekly card", p:"Rp35.000"}];
+const zpdata= [{d:"", p:"Rp"},{d:"", p:"Rp"},{d:"", p:"Rp"},{d:"", p:"Rp"},{d:"", p:"Rp"},{d:"", p:"Rp"},{d:"", p:"Rp"},{d:"", p:"Rp"},{d:"", p:"Rp"},{d:"", p:"Rp"},{d:"", p:"Rp"},{d:"", p:"Rp"},{d:"", p:"Rp"}]
 
 // Fungsi untuk membuat elemen kartu produk di HTML
 function renderCards(data, elementId, gameLabel, uniquePrefix, iconClass = "fa-gem") {
@@ -97,6 +97,9 @@ renderCards(fcData, 'pane-fc', 'FC Mobile', 'fc', 'fa-solid fa-soccer-ball');
 renderCards(gidata, 'pane-gi', 'Genshin Impact', 'gi', 'fa-solid fa-dragon');
 renderCards(mcdata, 'pane-mc', 'Minecraft', 'mc', 'fa-solid fa-cube');
 renderCards(rbdata, 'pane-rb', 'Roblox', 'rb', 'fa-solid fa-cubes');
+renderCards(spsdata, 'pane-sps', 'Super Sus', 'sps','fa-solid fa-ghost');
+renderCards(mcgdata, 'pane-mcg', 'Magic Chess Go Go (MCGG)','mcg','fa-solid fa-chess');
+renderCards(zpdata, 'pane-zp', 'Zepeto Zems', 'zp', 'fa-solid fa-user');
 
 // Fungsi Menampilkan Kustomisasi Alert Modal Elegan
 function showCustomAlert(title, message, isSuccess = true) {
@@ -114,7 +117,7 @@ function showCustomAlert(title, message, isSuccess = true) {
         icon.className = "fa-solid fa-circle-check animate-bounce";
     } else {
         iconBg.className = "w-14 h-14 rounded-2xl flex items-center justify-center text-xl mb-4 shadow-lg bg-red-500/10 text-red-400 border border-red-500/20";
-        icon.className = "fa-solid fa-circle-exclamation animate-shake";
+        icon.className = "fa-solid fa-circle-exclamation";
     }
 
     modal.classList.remove('opacity-0', 'pointer-events-none');
@@ -148,9 +151,16 @@ function selectProduct(cardId, nominal, harga) {
 // Fungsi Navigasi Mengganti Tampilan List Game
 function switchGame(gameKey, scrollToSection = false) {
     currentGameKey = gameKey;
-    selectedNominal = ""; selectedHarga = "";
+    selectedNominal = ""; 
+    selectedHarga = "";
 
-    const labels = {ff:"Free Fire", ml:"Mobile Legends", bs:"Blood Strike", pubg:"PUBG Mobile", vlo:"Valorant", cod:"Call Of Duty", kc:"King's Chalce", hok:"Honor Of Kings", fc:"FC Mobile", gi:'Genshin Impact', mc:'Minecraft', rb:'Roblox'};
+    const labels = {
+        ff: "Free Fire", ml: "Mobile Legends", bs: "Blood Strike", pubg: "PUBG Mobile", 
+        vlo: "Valorant", cod: "Call Of Duty", kc: "King's Chalce", hok: "Honor Of Kings", 
+        fc: "FC Mobile", gi: 'Genshin Impact', mc: 'Minecraft', rb: 'Roblox', 
+        sps: 'Super Sus', mcg: 'Magic Chess Go Go (MCGG)',
+        zp:'Zepeto Zems', 
+    };
     currentGameLabel = labels[gameKey] || gameKey;
 
     document.querySelectorAll('.game-pane').forEach(el => el.classList.add('hidden'));
@@ -174,20 +184,25 @@ function switchGame(gameKey, scrollToSection = false) {
         activeBtn.querySelector('span').className = "text-[11px] font-bold mt-2.5 text-cyan-400 transition-colors line-clamp-2";
     }
 
-    // Mengatur input khusus game tertentu
+    // Mengatur visibilitas input dinamis
     const zoneWrapper = document.getElementById('zone-id-wrapper');
     const serverWrapper = document.getElementById('choose-server-wrapper');
-    
-    // Reset wrapper visibilitas
+    const nowaWrapper = document.getElementById('no-wa-kamu-wrapper');
+  
     zoneWrapper.classList.add('hidden');
     serverWrapper.classList.add('hidden');
+    nowaWrapper.classList.add('hidden');
+    
     document.getElementById('zone-id').value = "";
     document.getElementById('choose-server').value = "";
-
-    if (gameKey === 'ml') {
+    document.getElementById('no-wa-kamu').value = "";
+  
+    if (gameKey === 'ml' || gameKey === 'mcg') {
         zoneWrapper.classList.remove('hidden');
     } else if (gameKey === 'gi') {
         serverWrapper.classList.remove('hidden');
+    } else if (gameKey === 'mc') {
+        nowaWrapper.classList.remove('hidden');
     }
 
     if (scrollToSection) {
@@ -218,7 +233,8 @@ function prosesPembayaran() {
     const idPlayer = document.getElementById('player-id').value.trim();
     const idZone = document.getElementById('zone-id').value.trim();
     const chooseServer = document.getElementById('choose-server').value.trim();
-
+    const nowa = document.getElementById("no-wa-kamu").value.trim();
+  
     if (!nick) {
         showCustomAlert("Nickname Kosong", "Mohon masukkan Nickname akun game kamu!, kalo gtw ngasal aja yg penting bener id nya!", false);
         return;
@@ -227,20 +243,26 @@ function prosesPembayaran() {
         showCustomAlert("ID Akun Kosong", "Mohon lengkapi kolom User ID game kamu!", false);
         return;
     }
-    if (currentGameKey === 'ml' && !idZone) {
-        showCustomAlert("Zone ID Kosong", "Khusus Mobile Legends, mohon isi Zone ID dalam kurung kamu!", false);
+    if ((currentGameKey === 'ml' || currentGameKey === 'mcg') && !idZone) {
+        showCustomAlert("Zone ID Kosong", "Mohon isi Zone ID game kamu!", false);
         return;
     }
     if (currentGameKey === 'gi' && !chooseServer) {
         showCustomAlert("Choose Server Kosong", "Khusus Genshin Impact, mohon isi server dalam kurung kamu!", false);
         return;
     }
+    if (currentGameKey === 'mc' && !nowa) {
+        showCustomAlert("No WA Kosong", "Khusus Minecraft, mohon isi no wa kamu!", false);
+        return;
+    }
 
     let akunTujuan = idPlayer;
-    if (currentGameKey === 'ml') { 
+    if (currentGameKey === 'ml' || currentGameKey === 'mcg') { 
         akunTujuan += ` (${idZone})`; 
     } else if (currentGameKey === 'gi') { 
         akunTujuan += ` (${chooseServer})`; 
+    } else if (currentGameKey === 'mc') {
+        akunTujuan += ` (${nowa})`;
     }
 
     document.getElementById('inv-game').innerText = currentGameLabel;
@@ -272,12 +294,15 @@ function kirimKeTelegram() {
     const idPlayer = document.getElementById('player-id').value.trim();
     const idZone = document.getElementById('zone-id').value.trim();
     const chooseServer = document.getElementById('choose-server').value.trim();
-    
+    const nowa = document.getElementById('no-wa-kamu').value.trim();
+  
     let akunTujuan = idPlayer;
-    if (currentGameKey === 'ml') { 
+    if (currentGameKey === 'ml' || currentGameKey === 'mcg') { 
         akunTujuan += ` (${idZone})`; 
     } else if (currentGameKey === 'gi') {
         akunTujuan += ` (${chooseServer})`;
+    } else if (currentGameKey === 'mc') {
+        akunTujuan += ` (${nowa})`;
     }
 
     const pesan = `🛒 *PESANAN BARU MASUK*\n\n` +

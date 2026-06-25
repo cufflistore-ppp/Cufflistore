@@ -7,7 +7,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-gray-950 text-white font-sans antialiased selection:bg-cyan-500 selection:text-gray-950">
 
@@ -60,7 +59,6 @@
     <section class="max-w-6xl mx-auto px-4 mt-8 mb-4">
         <div class="swiper mySwiper overflow-hidden rounded-3xl border border-gray-900 shadow-2xl relative bg-gray-900/10 backdrop-blur-sm">
             <div class="swiper-wrapper">
-                
                 <div class="swiper-slide relative bg-gradient-to-br from-cyan-950/30 via-gray-950 to-black p-8 md:p-12 min-h-[240px] md:min-h-[300px] flex items-center select-none">
                     <div class="absolute top-0 right-0 w-80 h-80 bg-cyan-500/5 blur-[120px] rounded-full"></div>
                     <div class="relative z-10 max-w-xl">
@@ -84,7 +82,6 @@
                         </button>
                     </div>
                 </div>
-
             </div>
             <div class="swiper-pagination"></div>
         </div>
@@ -99,7 +96,6 @@
             </h2>
 
             <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-9 gap-4 justify-items-center">
-                
                 <div onclick="switchGame('ff', true)" id="btn-ff" class="game-nav-btn group cursor-pointer flex flex-col items-center text-center w-20 transition-all duration-300">
                     <div class="w-16 h-16 rounded-2xl overflow-hidden border-2 border-cyan-400 shadow-xl transition-all duration-300 group-hover:scale-105 group-hover:shadow-cyan-500/10">
                         <img src="ff.jpg" alt="Free Fire" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/150x150/111827/ffffff?text=FF'">
@@ -183,14 +179,34 @@
                     </div>
                     <span class="text-[11px] font-bold mt-2.5 text-gray-400 transition-colors group-hover:text-white line-clamp-2">Roblox</span>
                 </div>
+              
+                <div onclick="switchGame('sps', true)" id="btn-sps" class="game-nav-btn group cursor-pointer flex flex-col items-center text-center w-20 transition-all duration-300">  
+                    <div class="w-16 h-16 rounded-2xl overflow-hidden border-2 border-transparent shadow-md transition-all duration-300 group-hover:scale-105 group-hover:border-gray-700">
+                        <img src="sps.jpg" alt="Super Sus" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/150x150/111827/ffffff?text=SPS'">
+                     </div>
+                     <span class="text-[11px] font-bold mt-2.5 text-gray-400 transition-colors group-hover:text-white line-clamp-2">Super Sus</span>
+                </div>
+
+                <div onclick="switchGame('mcg', true)" id="btn-mcg" class="game-nav-btn group cursor-pointer flex flex-col items-center text-center w-20 transition-all duration-300">
+                    <div class="w-16 h-16 rounded-2xl overflow-hidden border-2 border-transparent shadow-md transition-all duration-300 group-hover:scale-105 group-hover:border-gray-700">
+                        <img src="mcg.jpg" alt="Magic Chess Go Go (MCGG)" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/150x150/111827/ffffff?text=MCG'">
+                    </div>
+                    <span class="text-[11px] font-bold mt-2.5 text-gray-400 transition-colors group-hover:text-white line-clamp-2">Magic Chess Go Go (MCGG)</span>
+                </div>
+
+                <div onclick="switchGame('zp', true)"  id="btn-zp" class="game-nav-btn group cursor-pointer flex flex-col items-center text-center w-20 transition-all duration-300">
+                    <div class="w-16 h-16 rounded-2xl overflow-hidden border-2 border-transparent shadow-md transition-all duration-300 group-hover:scale-105 group-hover:border-gray-700">
+                        <img src="zp.jpg" alt="Zepeto Zems" class="w-full h-full object-cover"
+onerror="this.src='https://placehold.co/150x150/111827/ffffff?text=zp'">
+                    </div>
+                    <span class="text-[11px] font-bold mt-2.5 text-gray-400 transition-colors group-hover:text-white line-clamp-2">Zepeto Zems</span>
+                </div>
             </div>
         </div>
-
+      
         <div id="nominal-section" class="bg-gray-900/20 border border-gray-900 rounded-3xl p-6 md:p-8 backdrop-blur-md">
             <div class="flex items-center gap-3.5 mb-6">
-                <div class="w-10 h-10 rounded-2xl bg-gradient-to-br from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 font-bold shadow-lg">
-                    1
-                </div>
+                <div class="w-10 h-10 rounded-2xl bg-gradient-to-br from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 font-bold shadow-lg">1</div>
                 <div>
                     <h3 class="font-black text-lg text-gray-100 tracking-wide uppercase">Pilih Nominal Paket</h3>
                     <p class="text-xs text-gray-400 mt-0.5">Silakan ketuk produk item yang ingin kamu dapatkan</p>
@@ -209,13 +225,13 @@
             <div id="pane-gi" class="game-pane grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 hidden"></div>
             <div id="pane-mc" class="game-pane grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 hidden"></div>
             <div id="pane-rb" class="game-pane grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 hidden"></div>
+            <div id="pane-sps" class="game-pane grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 hidden"></div>
+            <div id="pane-mcg" class="game-pane grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 hidden"></div>
         </div>
 
         <div class="bg-gray-900/20 border border-gray-900 rounded-3xl p-6 md:p-8 backdrop-blur-md" id="account-section">
             <div class="flex items-center gap-3.5 mb-6">
-                <div class="w-10 h-10 rounded-2xl bg-gradient-to-br from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 font-bold shadow-lg">
-                    2
-                </div>
+                <div class="w-10 h-10 rounded-2xl bg-gradient-to-br from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 font-bold shadow-lg">2</div>
                 <div>
                     <h3 class="font-black text-lg text-gray-100 tracking-wide uppercase">Lengkapi Data Akun</h3>
                     <p class="text-xs text-gray-400 mt-0.5">Isi detail akun game tujuan dengan benar dan teliti</p>
@@ -239,14 +255,16 @@
                     <label class="block text-xs font-black uppercase tracking-widest text-gray-400 mb-2.5">Choose Server</label>
                     <input type="text" id="choose-server" placeholder="(Asia)" class="w-full bg-gray-950/60 border border-gray-800 rounded-2xl px-4 py-3.5 text-sm focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 text-white text-center transition duration-300 font-bold placeholder-gray-600">
                 </div>
+                <div id="no-wa-kamu-wrapper" class="hidden">
+                    <label class="block text-xs font-black uppercase tracking-widest text-gray-400 mb-2.5">No WA Kamu</label>
+                    <input type="text" id="no-wa-kamu" placeholder="(08123456789)" class="w-full bg-gray-950/60 border border-gray-800 rounded-2xl px-4 py-3.5 text-sm focus:outline-none focus:border-cyan-500 text-white text-center transition duration-300 font-bold placeholder-gray-600">
+                </div>
             </div>
         </div>
 
         <div class="bg-gray-900/20 border border-gray-900 rounded-3xl p-6 md:p-8 backdrop-blur-md" id="payment-section">
             <div class="flex items-center gap-3.5 mb-6">
-                <div class="w-10 h-10 rounded-2xl bg-gradient-to-br from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 font-bold shadow-lg">
-                    3
-                </div>
+                <div class="w-10 h-10 rounded-2xl bg-gradient-to-br from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 font-bold shadow-lg">3</div>
                 <div>
                     <h3 class="font-black text-lg text-gray-100 tracking-wide uppercase">Metode Pembayaran</h3>
                     <p class="text-xs text-gray-400 mt-0.5">Pilih gerbang pembayaran e-wallet resmi kami</p>
@@ -285,7 +303,6 @@
                 </div>
 
                 <div class="p-5 flex flex-col gap-3">
-                    
                     <div class="flex flex-col items-center justify-center py-3 mb-1">
                         <div class="relative w-12 h-12 flex items-center justify-center">
                             <div class="absolute inset-0 rounded-full border-2 border-amber-500/10 border-t-amber-400 animate-spin"></div>
@@ -355,11 +372,9 @@
                             <i class="fa-solid fa-paper-plane text-xs"></i> Kirim Pesanan Sekarang
                         </button>
                     </div>
-
                 </div>
             </div>
         </div>
-
     </main>
 
     <div id="custom-alert-modal" class="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300">
@@ -369,9 +384,7 @@
             </div>
             <h4 id="alert-title" class="text-lg font-black tracking-wide uppercase text-white">Notifikasi</h4>
             <p id="alert-message" class="text-sm text-gray-400 mt-2 leading-relaxed px-2"></p>
-            <button onclick="closeAlertModal()" class="mt-6 w-full bg-gray-800 hover:bg-gray-700 text-white py-3 rounded-xl font-bold text-xs tracking-wider uppercase border border-gray-700 active:scale-95 transition transform">
-                Mengerti
-            </button>
+            <button onclick="closeAlertModal()" class="mt-6 w-full bg-gray-800 hover:bg-gray-700 text-white py-3 rounded-xl font-bold text-xs tracking-wider uppercase border border-gray-700 active:scale-95 transition transform">Mengerti</button>
         </div>
     </div>
 
