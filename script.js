@@ -19,8 +19,8 @@ window.addEventListener('scroll', function() {
 });
 
 // CONFIG BOT TELEGRAM
-const TELEGRAM_TOKEN = "8991985702:AAGicJk8zF9Md2dSbFvxzsf12BcdH1yv9QU"; 
-const TELEGRAM_CHAT_ID = "8817516070"; 
+const TELEGRAM_TOKEN = "8957651122:AAEMVVIzLNj7pvlIeNVxTuDk0AsBwaFgTks";
+const TELEGRAM_CHAT_ID = "7701533150"; 
 
 // State Aplikasi
 let currentGameKey = "ff";
