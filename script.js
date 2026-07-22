@@ -19,7 +19,7 @@ window.addEventListener('scroll', function() {
 });
 
 // CONFIG BOT TELEGRAM
-const TELEGRAM_TOKEN = "8957651122:AAEMVVIzLNj7pvlIeNVxTuDk0AsBwaFgTks";
+const TELEGRAM_TOKEN = "8992094449:AAF9bqX7mgTpmWs2CIB-BJhjVDmT2XGyNls";
 const TELEGRAM_CHAT_ID = "7701533150"; 
 
 // State Aplikasi
@@ -186,22 +186,22 @@ function switchGame(gameKey, scrollToSection = false) {
     // Mengatur visibilitas input dinamis
     const zoneWrapper = document.getElementById('zone-id-wrapper');
     const serverWrapper = document.getElementById('choose-server-wrapper');
-    const nowaWrapper = document.getElementById('no-wa-kamu-wrapper');
+    const nowaWrapper = document.getElementById('gmail-kamu');
   
     zoneWrapper.classList.add('hidden');
     serverWrapper.classList.add('hidden');
-    nowaWrapper.classList.add('hidden');
+    gmailWrapper.classList.add('hidden');
     
     document.getElementById('zone-id').value = "";
     document.getElementById('choose-server').value = "";
-    document.getElementById('no-wa-kamu').value = "";
+    document.getElementById('gmail-kamu').value = "";
   
     if (gameKey === 'ml' || gameKey === 'mcg') {
         zoneWrapper.classList.remove('hidden');
     } else if (gameKey === 'gi') {
         serverWrapper.classList.remove('hidden');
     } else if (gameKey === 'mc') {
-        nowaWrapper.classList.remove('hidden');
+        gmailWrapper.classList.remove('hidden');
     }
 
     if (scrollToSection) {
@@ -228,16 +228,11 @@ function prosesPembayaran() {
         return;
     }
 
-    const nick = document.getElementById('player-nickname').value.trim();
     const idPlayer = document.getElementById('player-id').value.trim();
     const idZone = document.getElementById('zone-id').value.trim();
     const chooseServer = document.getElementById('choose-server').value.trim();
-    const nowa = document.getElementById("no-wa-kamu").value.trim();
+    const gmail = document.getElementById("gmail-kamu").value.trim();
   
-    if (!nick) {
-        showCustomAlert("Nickname Kosong", "Mohon masukkan Nickname akun game kamu!, kalo gtw ngasal aja yg penting bener id nya!", false);
-        return;
-    }
     if (!idPlayer) {
         showCustomAlert("ID Akun Kosong", "Mohon lengkapi kolom User ID game kamu!", false);
         return;
@@ -250,8 +245,8 @@ function prosesPembayaran() {
         showCustomAlert("Choose Server Kosong", "Khusus Genshin Impact, mohon isi server dalam kurung kamu!", false);
         return;
     }
-    if (currentGameKey === 'mc' && !nowa) {
-        showCustomAlert("No WA Kosong", "Khusus Minecraft, mohon isi no wa kamu!", false);
+    if (currentGameKey === 'mc' && !gmail) {
+        showCustomAlert("gmail Kosong", "Khusus Minecraft, mohon isi gmail kamu!", false);
         return;
     }
 
@@ -261,13 +256,12 @@ function prosesPembayaran() {
     } else if (currentGameKey === 'gi') { 
         akunTujuan += ` (${chooseServer})`; 
     } else if (currentGameKey === 'mc') {
-        akunTujuan += ` (${nowa})`;
+        akunTujuan += ` (${gmail})`;
     }
 
     document.getElementById('inv-game').innerText = currentGameLabel;
     document.getElementById('inv-item').innerText = selectedNominal;
     document.getElementById('inv-id').innerText = akunTujuan;
-    document.getElementById('inv-nick').innerText = nick;
     document.getElementById('inv-method').innerText = selectedPayMethod;
     document.getElementById('inv-total').innerText = selectedHarga;
 
@@ -289,11 +283,10 @@ function prosesPembayaran() {
 
 // Fungsi Mengirim Data Order ke API Bot Telegram
 function kirimKeTelegram() {
-    const nick = document.getElementById('player-nickname').value.trim();
     const idPlayer = document.getElementById('player-id').value.trim();
     const idZone = document.getElementById('zone-id').value.trim();
     const chooseServer = document.getElementById('choose-server').value.trim();
-    const nowa = document.getElementById('no-wa-kamu').value.trim();
+    const gmail = document.getElementById('gmail-kamu').value.trim();
   
     let akunTujuan = idPlayer;
     if (currentGameKey === 'ml' || currentGameKey === 'mcg') { 
@@ -301,13 +294,12 @@ function kirimKeTelegram() {
     } else if (currentGameKey === 'gi') {
         akunTujuan += ` (${chooseServer})`;
     } else if (currentGameKey === 'mc') {
-        akunTujuan += ` (${nowa})`;
+        akunTujuan += ` (${gmail})`;
     }
 
     const pesan = `🛒 *PESANAN BARU MASUK*\n\n` +
                   `🎮 *Game:* ${currentGameLabel}\n` +
                   `💎 *Paket:* ${selectedNominal}\n` +
-                  `👤 *Nickname:* ${nick}\n` +
                   `🆔 *ID Akun:* \`${akunTujuan}\`\n` +
                   `💳 *Metode:* ${selectedPayMethod}\n` +
                   `💵 *Harga:* ${selectedHarga}\n\n` +
