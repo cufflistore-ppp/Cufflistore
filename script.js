@@ -19,7 +19,7 @@ window.addEventListener('scroll', function() {
 });
 
 // CONFIG BOT TELEGRAM
-const TELEGRAM_TOKEN = "8992094449:AAF9bqX7mgTpmWs2CIB-BJhjVDmT2XGyNls";
+const TELEGRAM_TOKEN = "8957651122:AAEMVVIzLNj7pvlIeNVxTuDk0AsBwaFgTks"; 
 const TELEGRAM_CHAT_ID = "7701533150"; 
 
 // State Aplikasi
@@ -37,7 +37,7 @@ const adminAccounts = {
 };
 
 // Data Nominal Paket Game
-const mlData = [{d:"2 Diamonds", p:"Rp2.000"}, {d:"5 Diamonds", p:"Rp3.000"}, {d:"12 Diamonds", p:"Rp4.000"}, {d:"19 Diamonds", p:"Rp5.500"}, {d:"28 Diamonds", p:"Rp8.000"}, {d:"59 Diamonds", p:"Rp16.000"}, {d:"112 Diamonds", p:"Rp30.000"}, {d:"172 Diamonds", p:"Rp46.000"}, {d:"381 Diamonds", p:"Rp105.000"}, {d:"429 Diamonds", p:"Rp115.000"}, {d:"1136 Diamonds", p:"Rp294.000"},{d:"wdp", p:"Rp35.000"},{d:"wdp ×2", p:"Rp70.000"},{d:"wdp ×3", p:"Rp100.000"},{d:"wdp ×4", p:"Rp135.000"},{d:"wdp ×5", p:"Rp160.000"},{d:"stalight membership (300 diamonds)", p:"Rp95.000"},{d:"stalight membership plus (750 diamonds)", p:"Rp120.000"}];
+const mlData = [{d:"2 Diamonds", p:"Rp3.500"}, {d:"5 Diamonds", p:"Rp5.500"}, {d:"12 Diamonds", p:"Rp6.500"}, {d:"19 Diamonds", p:"Rp7.500"}, {d:"28 Diamonds", p:"Rp9.000"}, {d:"59 Diamonds", p:"Rp19.000"}, {d:"112 Diamonds", p:"Rp33.000"}, {d:"172 Diamonds", p:"Rp46.000"}, {d:"381 Diamonds", p:"Rp107.000"}, {d:"429 Diamonds", p:"Rp119.000"}, {d:"1136 Diamonds", p:"Rp294.000"},{d:"wdp", p:"Rp35.000"},{d:"wdp ×2", p:"Rp70.000"},{d:"wdp ×3", p:"Rp100.000"},{d:"wdp ×4", p:"Rp135.000"},{d:"wdp ×5", p:"Rp160.000"},{d:"stalight membership (300 diamonds)", p:"Rp95.000"},{d:"stalight membership plus (750 diamonds)", p:"Rp120.000"}];
 const bsData = [{d:"100 + 5 Golds", p:"Rp11.000"}, {d:"300 + 20 Golds", p:"Rp35.000"}, {d:"500 + 40 Golds", p:"Rp58.000"}, {d:"600 + 45 Golds", p:"Rp70.000"}, {d:"800 + 60 Golds", p:"Rp93.000"}, {d:"1000 + 100 Golds", p:"Rp117.000"}, {d:"1200 + 110 Golds", p:"Rp140.000"}, {d:"1500 + 140 Golds", p:"Rp175.000"}, {d:"2000 + 260 Golds", p:"Rp234.000"}, {d:"2500 + 300 Golds", p:"Rp292.000"}];
 const ffData = [{d:"5 Diamonds", p:"Rp1.500"}, {d:"10 Diamonds", p:"Rp2.000"}, {d:"12 Diamonds", p:"Rp2.200"}, {d:"15 Diamonds", p:"Rp3.000"}, {d:"20 Diamonds", p:"Rp4.000"}, {d:"25 Diamonds", p:"Rp5.000"}, {d:"50 Diamonds", p:"Rp8.000"}, {d:"70 Diamonds", p:"Rp10.000"}, {d:"140 Diamonds", p:"Rp19.000"}, {d:"355 Diamonds", p:"Rp49.000"}, {d:"720 Diamonds", p:"Rp99.000"}, {d:"1450 Diamonds", p:"Rp197.000"},{d:"level up pas -level 6", p:"Rp9.900"},{d:"level up pas -level 10", p:"13.900"},{d:"level up pas -level 15", p:"Rp14.900"},{d:"level up pas -level 20", p:"Rp16.600"},{d:"level up pas -level 25", p:"Rp18.900"},{d:"levelnup pas -level 30", p:"Rp20.000"},{d:"Mingguan Lite", p:"Rp25.000"},{d:"Membership Mingguan", p:"Rp35.000"},{d:"Booyah Pas card", p:"Rp48.900"},{d:"Membership Bulanan", p:"Rp92.000"}];
 const pubgData = [{d:"60 UC global", p:"Rp20.000"},{d:"120 uc global", p:"Rp35.000"},{d:"300 + 25 uc global", p:"Rp82.000"},{d:"325 + UC global", p:"Rp98.000"},{d:"600 + 60 uc global", p:"Rp160.000"},{d:"660 + 120 uc global", p:"Rp190.000"},{d:"1.500 + 300 uc global", p:"Rp390.000"},{d:"2.100 + 360 uc global", p:"Rp557.000"},{d:"3.000 + 850 uc global", p:"Rp778.000"},{d:"6.000 + 2.100 uc global", p:"Rp1.563.000"}];
@@ -186,22 +186,22 @@ function switchGame(gameKey, scrollToSection = false) {
     // Mengatur visibilitas input dinamis
     const zoneWrapper = document.getElementById('zone-id-wrapper');
     const serverWrapper = document.getElementById('choose-server-wrapper');
-    const nowaWrapper = document.getElementById('gmail-kamu');
+    const nowaWrapper = document.getElementById('no-wa-kamu-wrapper');
   
     zoneWrapper.classList.add('hidden');
     serverWrapper.classList.add('hidden');
-    gmailWrapper.classList.add('hidden');
+    nowaWrapper.classList.add('hidden');
     
     document.getElementById('zone-id').value = "";
     document.getElementById('choose-server').value = "";
-    document.getElementById('gmail-kamu').value = "";
+    document.getElementById('no-wa-kamu').value = "";
   
     if (gameKey === 'ml' || gameKey === 'mcg') {
         zoneWrapper.classList.remove('hidden');
     } else if (gameKey === 'gi') {
         serverWrapper.classList.remove('hidden');
     } else if (gameKey === 'mc') {
-        gmailWrapper.classList.remove('hidden');
+        nowaWrapper.classList.remove('hidden');
     }
 
     if (scrollToSection) {
@@ -231,7 +231,7 @@ function prosesPembayaran() {
     const idPlayer = document.getElementById('player-id').value.trim();
     const idZone = document.getElementById('zone-id').value.trim();
     const chooseServer = document.getElementById('choose-server').value.trim();
-    const gmail = document.getElementById("gmail-kamu").value.trim();
+    const nowa = document.getElementById("no-wa-kamu").value.trim();
   
     if (!idPlayer) {
         showCustomAlert("ID Akun Kosong", "Mohon lengkapi kolom User ID game kamu!", false);
@@ -245,8 +245,8 @@ function prosesPembayaran() {
         showCustomAlert("Choose Server Kosong", "Khusus Genshin Impact, mohon isi server dalam kurung kamu!", false);
         return;
     }
-    if (currentGameKey === 'mc' && !gmail) {
-        showCustomAlert("gmail Kosong", "Khusus Minecraft, mohon isi gmail kamu!", false);
+    if (currentGameKey === 'mc' && !nowa) {
+        showCustomAlert("No WA Kosong", "Khusus Minecraft, mohon isi no wa kamu!", false);
         return;
     }
 
@@ -256,7 +256,7 @@ function prosesPembayaran() {
     } else if (currentGameKey === 'gi') { 
         akunTujuan += ` (${chooseServer})`; 
     } else if (currentGameKey === 'mc') {
-        akunTujuan += ` (${gmail})`;
+        akunTujuan += ` (${nowa})`;
     }
 
     document.getElementById('inv-game').innerText = currentGameLabel;
@@ -286,7 +286,7 @@ function kirimKeTelegram() {
     const idPlayer = document.getElementById('player-id').value.trim();
     const idZone = document.getElementById('zone-id').value.trim();
     const chooseServer = document.getElementById('choose-server').value.trim();
-    const gmail = document.getElementById('gmail-kamu').value.trim();
+    const nowa = document.getElementById('no-wa-kamu').value.trim();
   
     let akunTujuan = idPlayer;
     if (currentGameKey === 'ml' || currentGameKey === 'mcg') { 
@@ -294,7 +294,7 @@ function kirimKeTelegram() {
     } else if (currentGameKey === 'gi') {
         akunTujuan += ` (${chooseServer})`;
     } else if (currentGameKey === 'mc') {
-        akunTujuan += ` (${gmail})`;
+        akunTujuan += ` (${nowa})`;
     }
 
     const pesan = `🛒 *PESANAN BARU MASUK*\n\n` +
