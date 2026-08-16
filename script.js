@@ -324,3 +324,127 @@ function kirimKeTelegram() {
         showCustomAlert("Kesalahan Jaringan", "Gagal menghubungi server Telegram. Periksa koneksi internet Anda.", false);
     });
 }
+
+// ===============================
+// SISTEM PEMBAYARAN CUFFLI
+// ===============================
+
+// Membuat pembayaran
+function buatPembayaran(amount){
+
+    fetch("payment.php", {
+        method: "POST",
+        headers:{
+            "Content-Type":"application/json"
+        },
+        body: JSON.stringify({
+            amount: amount
+        })
+    })
+
+    .then(res => res.json())
+
+    .then(data => {
+
+        console.log(data);
+
+        if(data.transactionId){
+
+            // simpan ID transaksi
+            localStorage.setItem(
+                "transactionId",
+                data.transactionId
+            );
+
+            // tampilkan QRIS/link pembayaran
+            if(data.qris){
+                document.getElementById("qris").src = data.qris;
+            }
+
+            alert("Silahkan lakukan pembayaran");
+
+        }else{
+
+            alert("Gagal membuat pembayaran");
+
+        }
+
+    })
+
+    .catch(err=>{
+        console.log(err);
+        alert("Terjadi kesalahan server");
+    });
+
+}
+
+
+
+// Cek pembayaran
+function cekPembayaran(){
+
+    let transactionId =
+    localStorage.getItem("transactionId");
+
+
+    if(!transactionId){
+
+        alert("Transaksi belum dibuat");
+
+        return;
+    }
+
+
+    fetch(
+    "status.php?transactionId="+transactionId
+    )
+
+
+    .then(res=>res.json())
+
+
+    .then(data=>{
+
+
+        console.log(data);
+
+
+        if(
+            data.status === "paid" ||
+            data.status === "success"
+        ){
+
+            document.getElementById("statusPembayaran").innerHTML =
+            `
+            <div>
+            ✅ Pembayaran berhasil<br>
+            ⏳ Admin sedang memproses pesanan anda
+            </div>
+            `;
+
+
+        }else{
+
+
+            document.getElementById("statusPembayaran").innerHTML =
+            `
+            <div>
+            ❌ Anda belum membayar pesanan ini.<br>
+            Mohon bayar terlebih dahulu.
+            </div>
+            `;
+
+
+        }
+
+
+    })
+
+
+    .catch(err=>{
+
+        console.log(err);
+
+    });
+
+}
