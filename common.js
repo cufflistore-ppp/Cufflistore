@@ -1,19 +1,19 @@
 /* ===== CUFFLI STORE — shared + Firebase ===== */
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAV3V_2tOZQtSLpNSOB3dDiWMprXBGq2EI",
-  authDomain: "cuffli-all-game-54f30.firebaseapp.com",
-  databaseURL: "https://cuffli-all-game-54f30-default-rtdb.asia-southeast1.firebasedatabase.app",
-  projectId: "cuffli-all-game-54f30",
-  storageBucket: "cuffli-all-game-54f30.firebasestorage.app",
-  messagingSenderId: "509183551168",
-  appId: "1:509183551168:web:27eef2c6355c43c2316f25",
-  measurementId: "G-JW00MS30TX"
+  apiKey: "AIzaSyAuyTsK1jECXksJPjOZuTdKwB3_Y4_tkXI",
+  authDomain: "cufflistore-adf41.firebaseapp.com",
+  databaseURL: "https://cufflistore-adf41-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "cufflistore-adf41",
+  storageBucket: "cufflistore-adf41.firebasestorage.app",
+  messagingSenderId: "136744932448",
+  appId: "1:136744932448:web:4f8a53171bfa726c061f05",
+  measurementId: "G-QZ3QRK3MV7"
 };
 
 // Telegram
-const TELEGRAM_TOKEN = "8991985702:AAGicJk8zF9Md2dSbFvxzsf12BcdH1yv9QU";
-const TELEGRAM_CHAT_ID = "8817516070";
+const TELEGRAM_TOKEN = "8957651122:AAEMVVIzLNj7pvlIeNVxTuDk0AsBwaFgTks";
+const TELEGRAM_CHAT_ID = "7701533150";
 
 // Admin password (halaman admin.html)
 const ADMIN_PASSWORD = "cuffliadmin";
